@@ -1,14 +1,11 @@
-#include <iostream>
-#include <vector>
-#include <iomanip>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
     int n, m;
-    cin >> n >> m;
+    scanf("%d %d", &n, &m);
     
-    vector<double> E(n + 1, 0.0);
+    double E[25];
     E[0] = 0.0;
     
     for (int k = 1; k <= n; k++) {
@@ -20,6 +17,6 @@ int main() {
         E[k] = 1.0 + sum / k;
     }
     
-    cout << fixed << setprecision(2) << E[n] << endl;
+    printf("%.2f\n", E[n]);
     return 0;
 }
